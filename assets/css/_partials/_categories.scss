@@ -1,0 +1,158 @@
+.categories-section {
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 600;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
+	background: #f0f0f0;
+	text-transform: uppercase;
+	.categories-open & {
+		display: block;
+
+	}
+	h3 {
+		font-size: 20px;
+		font-weight: 900;
+		margin: 0;
+	}
+	p {
+		font-size: 10px;
+		text-transform: none;
+	}
+	
+}
+
+.categories-wrapper {
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	h2 {
+		text-align: left;
+	}
+
+	
+	span {
+		font-weight: 900;
+		color: #0023ff;
+	}
+	
+}
+.a-wrapper {
+		text-align: center;
+		font-weight: 900;
+		margin-top: 40px;
+	}
+
+
+
+.categories-inner-wrapper {
+	height: 75vh;
+	overflow: hidden;
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		height: 40%;
+		img {
+			height: 60%;
+		}
+
+		> div {
+			background: #fff;
+			height: 100%;
+			overflow: hidden;
+			padding: 2%;
+			display: table;
+			cursor: pointer;
+			transition: 0.5s cubic-bezier(0.5, 0.15, 0.17, 1);
+			&:hover{
+				background-color: #d8d8d8;
+			}
+		}
+		.col-sm-6 {
+			img{
+			float: left;
+			height: 100%;
+			}
+		}
+	
+	}
+}
+.categories-text-wrapper {
+	display: table-cell;
+	vertical-align: bottom;
+}
+.categories-upper {
+	margin-top: 40px;
+	margin-bottom: 5%;
+	.col-sm-9 {
+		img {
+			float: left;
+			height: 100%;
+		}
+	}
+}
+.categories-big-wrapper{
+	position: relative;
+	top: -50%;
+	transform: translateY(50%);
+}
+.categories-img {
+	position: relative;
+	left: -50%;
+	transform: translateX(50%);
+}
+
+.close-categories {
+	width: 30px;
+	color: #000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+@media (max-width: 991px) {
+	.categories-section {
+		width: 100%;
+	}
+	.categories-wrapper {
+		width: 90%;
+	}
+}
+
+@media (max-width: 767px) {
+	.categories-wrapper {
+		width: 100%;
+		.flex {
+			justify-content: space-around;
+		}
+		.flex .col-sm-6, .flex .col-sm-9 {
+			display: none;
+		}
+		.active-product {
+			width: 80%;
+			font-size: 4em;
+			
+			.categories-text-wrapper {
+				text-align: right;
+			}
+			img {
+				float: left;
+				height: 100%;
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: 467px) {
+		.categories-upper .active-product {
+			width: 100%;
+		}
+}
